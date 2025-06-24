@@ -147,39 +147,6 @@ body {
     flex-wrap: wrap;
 }
 
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.btn-primary {
-    background: #3498db;
-    color: white;
-    border-color: #3498db;
-}
-
-.btn-primary:hover {
-    background: transparent;
-    border-color: white;
-    color: white;
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border-color: white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: #667eea;
-}
-
 /* أزرار التواصل في الواجهة الرئيسية */
 .hero-contact-buttons {
     display: flex;
@@ -301,15 +268,6 @@ body {
     color: white;
     text-decoration: none;
     border-color: rgba(255, 255, 255, 0.6);
-}
-
-.whatsapp-icon-img {
-    width: 32px;
-    height: 32px;
-    margin-left: 15px;
-    border-radius: 50%;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-    animation: bounce 2s infinite;
 }
 
 .whatsapp-icon {
@@ -763,13 +721,6 @@ body {
         text-align: center;
     }
     
-    .whatsapp-icon-img {
-        width: 28px;
-        height: 28px;
-        margin-left: 10px;
-        margin-bottom: 0;
-    }
-    
     .whatsapp-icon {
         font-size: 1.8rem;
         margin-left: 10px;
@@ -863,12 +814,6 @@ body {
         min-width: 140px;
         padding: 15px 20px;
         border-radius: 18px;
-    }
-    
-    .whatsapp-icon-img {
-        width: 24px;
-        height: 24px;
-        margin-left: 8px;
     }
     
     .whatsapp-icon {
