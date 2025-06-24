@@ -918,3 +918,213 @@ body {
     transition: color 0.3s ease;
 }
 
+
+/* قسم الخريطة */
+.map-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+}
+
+.map-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    pointer-events: none;
+}
+
+.map-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.map-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 10px;
+}
+
+.map-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+    border-radius: 22px;
+    z-index: -1;
+    animation: gradientShift 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c); }
+    25% { background: linear-gradient(45deg, #764ba2, #f093fb, #f5576c, #667eea); }
+    50% { background: linear-gradient(45deg, #f093fb, #f5576c, #667eea, #764ba2); }
+    75% { background: linear-gradient(45deg, #f5576c, #667eea, #764ba2, #f093fb); }
+}
+
+.map-wrapper iframe {
+    border-radius: 15px;
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.location-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.location-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+    transition: left 0.5s;
+}
+
+.location-card:hover::before {
+    left: 100%;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.location-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    min-width: 60px;
+    text-align: center;
+}
+
+.location-details h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.location-details p {
+    color: #6c757d;
+    margin: 4px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.location-details p:first-of-type {
+    color: #495057;
+    font-weight: 500;
+}
+
+/* تنسيقات الاستجابة للخريطة */
+@media (max-width: 768px) {
+    .map-section {
+        padding: 60px 0;
+    }
+    
+    .map-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .map-wrapper {
+        order: 2;
+    }
+    
+    .location-info {
+        order: 1;
+    }
+    
+    .location-card {
+        padding: 25px;
+        gap: 15px;
+    }
+    
+    .location-icon {
+        font-size: 2rem;
+        min-width: 50px;
+    }
+    
+    .location-details h3 {
+        font-size: 1.2rem;
+    }
+    
+    .location-details p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-section {
+        padding: 50px 0;
+    }
+    
+    .map-wrapper {
+        padding: 8px;
+        border-radius: 15px;
+    }
+    
+    .map-wrapper::before {
+        border-radius: 17px;
+    }
+    
+    .map-wrapper iframe {
+        height: 300px;
+        border-radius: 12px;
+    }
+    
+    .location-card {
+        padding: 20px;
+        border-radius: 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .location-icon {
+        font-size: 2.5rem;
+    }
+    
+    .location-details h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+}
+
