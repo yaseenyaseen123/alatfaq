@@ -193,17 +193,17 @@ body {
     align-items: center;
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     color: white;
-    padding: 30px 40px;
-    border-radius: 25px;
+    padding: 20px 30px;
+    border-radius: 20px;
     text-decoration: none;
-    box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
     transition: all 0.4s ease;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
     font-family: inherit;
     position: relative;
     overflow: hidden;
-    min-width: 350px;
+    min-width: 200px;
     justify-content: center;
 }
 
@@ -231,8 +231,8 @@ body {
 }
 
 .whatsapp-icon {
-    font-size: 3rem;
-    margin-left: 25px;
+    font-size: 2rem;
+    margin-left: 15px;
     animation: bounce 2s infinite;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
@@ -244,18 +244,9 @@ body {
 }
 
 .whatsapp-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-number {
-    font-size: 1.2rem;
-    opacity: 0.95;
+    font-size: 1.1rem;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
 }
 
 @keyframes bounce {
@@ -665,16 +656,16 @@ body {
     
     /* تنسيقات زر الواتساب للهواتف المحمولة */
     .whatsapp-btn {
-        min-width: 280px;
-        padding: 25px 30px;
-        flex-direction: column;
+        min-width: 180px;
+        padding: 18px 25px;
+        flex-direction: row;
         text-align: center;
     }
     
     .whatsapp-icon {
-        font-size: 2.5rem;
-        margin-left: 0;
-        margin-bottom: 10px;
+        font-size: 1.8rem;
+        margin-left: 10px;
+        margin-bottom: 0;
     }
     
     .whatsapp-text {
@@ -682,11 +673,7 @@ body {
     }
     
     .whatsapp-title {
-        font-size: 1.2rem;
-    }
-    
-    .whatsapp-number {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .hero-container {
@@ -750,21 +737,18 @@ body {
     
     /* تنسيقات زر الواتساب للشاشات الصغيرة جداً */
     .whatsapp-btn {
-        min-width: 250px;
-        padding: 20px 25px;
-        border-radius: 20px;
+        min-width: 160px;
+        padding: 15px 20px;
+        border-radius: 18px;
     }
     
     .whatsapp-icon {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin-left: 8px;
     }
     
     .whatsapp-title {
-        font-size: 1.1rem;
-    }
-    
-    .whatsapp-number {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
